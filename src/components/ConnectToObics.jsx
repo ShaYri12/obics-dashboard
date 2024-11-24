@@ -73,7 +73,7 @@ export default function ConnectToObics() {
               Connect your application to Obics in just a few minutes
             </p>
           </div>
-          <div>
+          <div className="w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-[19px] gap-y-[16px] w-full">
               <div className="flex items-center gap-[8px] bg-[#EEEFEF] rounded-[20px] px-[20px] py-[19px] hover:bg-opacity-[0.8] transition cursor-pointer">
                 <img

@@ -64,7 +64,7 @@ export default function ConnectToObics() {
         </section>
 
         {/* Connect to Obics Section */}
-        <section className="md:pt-[34px] pt-[20px] flex xl:flex-row flex-col gap-[22px]">
+        <section className="md:pt-[34px] pt-[20px] flex xl:flex-row flex-col gap-[22px] w-full">
           <div className="xl:max-w-[213.4px]  py-1">
             <h2 className="text-[25px] font-[600] font-jost mb-[9px]">
               Connect to Obics
@@ -74,7 +74,7 @@ export default function ConnectToObics() {
             </p>
           </div>
           <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-[19px] gap-y-[16px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-[19px] gap-y-[16px] w-full">
               <div className="flex items-center gap-[8px] bg-[#EEEFEF] rounded-[20px] px-[20px] py-[19px] hover:bg-opacity-[0.8] transition cursor-pointer">
                 <img
                   src="/assets/terminal-2-icon.png"

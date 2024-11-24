@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom scrollbar for elements with .custom-scrollbar class */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar (for horizontal scroll) */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc; /* Lighter color for the scrollbar thumb */
+  border-radius: 8px; /* Fully rounded scrollbar thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #bbb; /* Slightly darker on hover */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f9f9f9; /* Lighter track color */
+  border-radius: 8px; /* Roundness for the track as well */
+}
+
+/* For Firefox (apply only to .custom-scrollbar) */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #b3b3b3 #f9f9f9; /* Thumb color, Track color */
+}

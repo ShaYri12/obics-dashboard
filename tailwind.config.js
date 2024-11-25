@@ -8,6 +8,7 @@ export default {
       },
       fontFamily: {
         jost: ["Jost", "sans-serif"],
+        mono: ["Ubuntu Mono", "monospace"],
       },
     },
   },

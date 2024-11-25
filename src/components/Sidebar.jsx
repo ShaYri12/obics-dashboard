@@ -4,6 +4,7 @@ import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { IoIosCloseCircle } from "react-icons/io";
 import { FiSearch } from "react-icons/fi";
+import SearchInput from "./SearchInput";
 
 const Sidebar = () => {
   const [openSections, setOpenSections] = useState({}); // For parent dropdowns
@@ -292,7 +293,7 @@ const Sidebar = () => {
 
       <div
         ref={sidebarRef}
-        className={`custom-scrollbar fixed top-0 bg-[#FAFBFB] h-screen overflow-y-auto border-r transition-all duration-200 lg:shadow-none shadow-md p-[20px] ${
+        className={`custom-scrollbar fixed top-0 bg-[#FAFBFB] h-screen overflow-y-auto border-r transition-all duration-200 lg:shadow-none shadow-md px-[20px] lg:pt-[105px] pt-[90px] ${
           isSmall
             ? "xl:w-[300px] xl:min-w-[300px] w-[240px] min-w-[240px] left-0 z-[10]" // Left side for smaller screens
             : "max-w-[320px] w-full right-0 z-[20]" // Right side for larger screens
@@ -303,16 +304,7 @@ const Sidebar = () => {
         } transition-transform flex flex-col`}
       >
         {/* Search Bar */}
-        <div className="relative flex items-center bg-[#EEEFEF] rounded-full mb-[20px] lg:mt-[85px] mt-[70px] h-[45.15px]">
-          <div className="absolute inset-y-0 left-3 flex items-center">
-            <FiSearch className="text-[#B3B3B3] h-[20px] w-[20px]" />
-          </div>
-          <input
-            type="text"
-            placeholder="Search"
-            className="w-full h-12 pl-10 pr-4 rounded-full bg-[#EEEFEF] text-gray-500 placeholder-[#B3B3B3] focus:outline-none focus:ring-2 focus:ring-gray-200"
-          />
-        </div>
+        <SearchInput placeholder="Search" extraClass="lg:hidden flex" />
 
         {/* Sidebar Items */}
         <ul className="space-y-[25px]">

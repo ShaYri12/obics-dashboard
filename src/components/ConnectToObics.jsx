@@ -1,18 +1,34 @@
-import { BsArrowRightShort, BsLightning } from "react-icons/bs";
-import {
-  FaCloud,
-  FaDownload,
-  FaTerminal,
-  FaCode,
-  FaJava,
-  FaPython,
-  FaArrowRight,
-} from "react-icons/fa";
-import { FiDownload } from "react-icons/fi";
-import { MdOutlineCloud } from "react-icons/md";
-import { SiNodedotjs, SiGo } from "react-icons/si";
+import { BsArrowRightShort } from "react-icons/bs";
+import LanguageCard from "./LanguageCard";
+import FeatureCard from "./FeatureCard";
 
 export default function ConnectToObics() {
+  const features = [
+    {
+      icon: "/assets/lightning-icon.png",
+      title: "Quick Start",
+      description: "Get Started with Obics in 5 Minutes",
+    },
+    {
+      icon: "/assets/download-icon.png",
+      title: "Install",
+      description: "Install guides for every platform",
+    },
+    {
+      icon: "/assets/cloud-icon.png",
+      title: "Quick Start",
+      description: "The fastest way to get started with Obics",
+    },
+  ];
+
+  const integrations = [
+    { icon: "/assets/terminal-2-icon.png", name: "Obics CLI" },
+    { icon: "/assets/terminal-icon.png", name: "Cloud SQL Console" },
+    { icon: "/assets/node-js-icon.png", name: "Node Js" },
+    { icon: "/assets/java-icon.png", name: "Java" },
+    { icon: "/assets/python-icon.png", name: "Python" },
+    { icon: "/assets/go-icon.png", name: "Go" },
+  ];
   return (
     <div className="px-4 md:px-[40px] py-[30px] md:py-[41px] w-full">
       <div className="max-w-[1082.06px] mx-auto">
@@ -27,39 +43,15 @@ export default function ConnectToObics() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[19px]">
-            <div className="bg-[#EEEFEF] rounded-[20px] px-[21px] py-[20px] hover:bg-opacity-[0.8] transition cursor-pointer">
-              <div className="flex items-center gap-[10.68px] mb-[8.21px]">
-                <img src="/assets/lightning-icon.png" alt="lightning" />
-                <h2 className="text-[18px] font-[500] font-jost">
-                  Quick Start
-                </h2>
-              </div>
-              <p className="text-[#797B80]">
-                Get Started with Obics in 5 Minutes
-              </p>
-            </div>
-
-            <div className="bg-[#EEEFEF] rounded-[20px] px-[21px] py-[20px] hover:bg-opacity-[0.8] transition cursor-pointer">
-              <div className="flex items-center gap-[10.68px] mb-[8.21px]">
-                <img src="/assets/download-icon.png" alt="download" />
-                <h2 className="text-[18px] font-[500] font-jost">Install</h2>
-              </div>
-              <p className="text-[#797B80]">
-                Install guides for every platform
-              </p>
-            </div>
-
-            <div className="bg-[#EEEFEF] rounded-[20px] px-[21px] py-[20px] hover:bg-opacity-[0.8] transition cursor-pointer">
-              <div className="flex items-center gap-[10.68px] mb-[8.21px]">
-                <img src="/assets/cloud-icon.png" alt="cloud" />
-                <h2 className="text-[18px] font-[500] font-jost mt-[5px]">
-                  Quick Start
-                </h2>
-              </div>
-              <p className="text-[#797B80]">
-                The fastest way to get started with Obius
-              </p>
-            </div>
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                onClick={() => console.log(`${feature.title} clicked`)}
+              />
+            ))}
           </div>
         </section>
 
@@ -75,41 +67,14 @@ export default function ConnectToObics() {
           </div>
           <div className="w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-[19px] gap-y-[16px] w-full">
-              <div className="flex items-center gap-[8px] bg-[#EEEFEF] rounded-[20px] px-[20px] py-[19px] hover:bg-opacity-[0.8] transition cursor-pointer">
-                <img
-                  src="/assets/terminal-2-icon.png"
-                  alt="terminal-2"
-                  className="w-[35.69px]"
+              {integrations.map((integration, index) => (
+                <LanguageCard
+                  key={index}
+                  icon={integration.icon}
+                  name={integration.name}
+                  onClick={() => console.log(`${integration.name} clicked`)}
                 />
-                <h2 className="text-[18px] font-[500] font-jost">Obics CLI</h2>
-              </div>
-
-              <div className="flex items-center gap-[8px] bg-[#EEEFEF] rounded-[20px] px-[20px] py-[19px] hover:bg-opacity-[0.8] transition cursor-pointer">
-                <img src="/assets/terminal-icon.png" alt="terminal" />
-                <h2 className="text-[18px] font-[500] font-jost">
-                  Cloud SQL Console
-                </h2>
-              </div>
-
-              <div className="flex items-center gap-[8px] bg-[#EEEFEF] rounded-[20px] px-[20px] py-[19px] hover:bg-opacity-[0.8] transition cursor-pointer">
-                <img src="/assets/node-js-icon.png" alt="nodejs" />
-                <h2 className="text-[18px] font-[500] font-jost">Node Js</h2>
-              </div>
-
-              <div className="flex items-center gap-[8px] bg-[#EEEFEF] rounded-[20px] px-[20px] py-[19px] hover:bg-opacity-[0.8] transition cursor-pointer">
-                <img src="/assets/java-icon.png" alt="java" />
-                <h2 className="text-[18px] font-[500] font-jost">Java</h2>
-              </div>
-
-              <div className="flex items-center gap-[8px] bg-[#EEEFEF] rounded-[20px] px-[20px] py-[19px] hover:bg-opacity-[0.8] transition cursor-pointer">
-                <img src="/assets/python-icon.png" alt="python" />
-                <h2 className="text-[18px] font-[500] font-jost">Python</h2>
-              </div>
-
-              <div className="flex items-center gap-[8px] bg-[#EEEFEF] rounded-[20px] px-[20px] py-[19px] hover:bg-opacity-[0.8] transition cursor-pointer">
-                <img src="/assets/go-icon.png" alt="go" />
-                <h2 className="text-[18px] font-[500] font-jost">Go</h2>
-              </div>
+              ))}
             </div>
 
             <button className="mt-[27px] flex group items-center text-black hover:text-gray-800 transition cursor-pointer text-[14px]">
